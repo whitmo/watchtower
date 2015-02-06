@@ -1,0 +1,27 @@
+---
+name: watchtower
+summary: "A multi-dashboard interface for heka-hub & the panopticon stack"
+description: |
+  A multi-dashboard interface for the panopticon stack which builds
+  atop hekad.
+
+  Dashboards are launched as docker containers on the target host.
+
+subordinate: true
+categories:
+  - applications
+  - monitoring
+  - dashboards
+provides:
+  website:
+    interface: http
+  heka_dashboard:
+    interface: http
+requires:
+  influxdb:
+    interface: influxdb-http
+  elasticsearch:
+    interface: client
+  whisper_in:
+    interface: directory
+    scope: container

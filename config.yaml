@@ -1,0 +1,42 @@
+---
+options:
+  dashboards:
+    type: string
+    default: "grafana graphite kibana heka"
+    description: |
+      Whitespace delimited list of possible dashboards. Dashboard
+      options include:
+        - heka
+        - grafana
+        - kibana
+        - graphite
+
+      By default all dashboards are launched.
+  graphite_image:
+    type: string
+    default: "family/graphite"
+    description: |
+      Docker image to use as the graphite web application
+  retention_policy:
+    type: string
+    default: "[ [0, 30, 1440], [0, 900, 192], [0, 3600, 168], [0, 43200, 1456] ]"
+
+    description: |
+      A whisper file retention policy. See
+      http://graphite.readthedocs.org/en/latest/whisper.html.
+      This defines four archive sections:
+
+      * One day: 60 seconds for each of 1440 data points
+      * Two hours: 15 minutes for each of 8 data points
+      * One week: one hour for each of 168 data points
+      * Two years: 12 hours for each of 1456 data points
+  kibana_image:
+    type: string
+    default: "ehazlett/kibana"
+    description: |
+      Docker image for kibana
+  grafana:
+    type: string
+    default: "tutum/grafana"
+    description: |
+      Docker image for grafana
