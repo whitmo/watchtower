@@ -10,6 +10,7 @@ def hook_names(here=path(__file__).parent):
                  for x in here.files() if x.islink()):
         yield name
 
+
 hooks = AnsibleHooks(playbook_path='playbook/main.yml',
                      default_hooks=list(hook_names))
 

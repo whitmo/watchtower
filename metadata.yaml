@@ -15,9 +15,9 @@ categories:
 provides:
   website:
     interface: http
+requires:
   heka_dashboard:
     interface: http
-requires:
   influxdb:
     interface: influxdb-http
   elasticsearch:

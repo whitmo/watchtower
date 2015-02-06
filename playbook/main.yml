@@ -3,3 +3,18 @@
   vars:
   handlers:
   tasks:
+    - include: start.yml
+      tags:
+        - start
+
+    - include: stop.yml
+      tags:
+        - stop
+
+    - include: config-changed.yml
+      tags:
+        - config-changed
+
+    - include: upgrade-charm.yml
+      tags:
+        - upgrade-charm.yml

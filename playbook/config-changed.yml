@@ -1,0 +1,7 @@
+---
+- include: latest-docker.yml
+
+- include: dashboard-config/graphite.yml
+- include: dashboard-config/heka.yml
+- include: dashboard-config/grafana.yml
+- include: dashboard-config/kibana.yml

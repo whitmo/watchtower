@@ -5,7 +5,7 @@ panopticon.*
 
 ## Yo dawg, I heard you like dashboards
 
-The Watchtower charm gives you access to 4 popular monitoring and
+The Watchtower charm gives you access to 4 monitoring and
 analysis guis depending on what infrastructure you are running.
 
  - Heka Dashboard
