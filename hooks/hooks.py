@@ -16,13 +16,3 @@ hooks = AnsibleHooks(playbook_path='playbook/main.yml',
 
 if __name__ == "__main__":
     hooks.execute(sys.argv)
-
-# @hooks.hook()
-# def install():
-#     """
-#     Bootstrap ansible before running playbook
-#     """
-#     try:
-#         import ansible
-#     except ImportError:
-#         install_ansible_support(from_ppa=True)
