@@ -12,7 +12,7 @@ def hook_names(here=path(__file__).parent):
 
 
 hooks = AnsibleHooks(playbook_path='playbook/main.yml',
-                     default_hooks=list(hook_names))
+                     default_hooks=list(hook_names()))
 
 if __name__ == "__main__":
     hooks.execute(sys.argv)
