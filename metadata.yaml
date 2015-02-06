@@ -25,3 +25,6 @@ requires:
   whisper_in:
     interface: directory
     scope: container
+  docker-logging:
+    interface: docker-socket
+    optional: true
