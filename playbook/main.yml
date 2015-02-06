@@ -17,4 +17,8 @@
 
     - include: upgrade-charm.yml
       tags:
-        - upgrade-charm.yml
+        - upgrade-charm
+
+    - include: whisper-relation.yml
+      tags:
+        - whisper_in-relation-changed
